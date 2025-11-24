@@ -139,6 +139,26 @@ export function MarkdownRenderer({ content }: { content: string }) {
         a: ({ node, ...props }) => (
           <a className="text-primary hover:text-accent underline-offset-4 hover:underline" {...props} />
         ),
+        table: ({ node, ...props }) => (
+          <div className="my-6 overflow-x-auto">
+            <table className="w-full border-collapse border border-border" {...props} />
+          </div>
+        ),
+        thead: ({ node, ...props }) => (
+          <thead className="bg-muted" {...props} />
+        ),
+        tbody: ({ node, ...props }) => (
+          <tbody {...props} />
+        ),
+        tr: ({ node, ...props }) => (
+          <tr className="border-b border-border hover:bg-muted/50 transition-colors" {...props} />
+        ),
+        th: ({ node, ...props }) => (
+          <th className="border border-border px-4 py-3 text-left font-semibold text-foreground" {...props} />
+        ),
+        td: ({ node, ...props }) => (
+          <td className="border border-border px-4 py-3 text-foreground" {...props} />
+        ),
       }}
     >
       {content}

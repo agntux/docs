@@ -80,14 +80,14 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
   return (
     <>
     <div className="h-screen w-64 border-r bg-background flex flex-col">
-      <div className="p-4 border-b">
+      <div className="p-4 border-b shrink-0">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
             <span className="text-xs text-muted-foreground">LOGO</span>
           </div>
           <span className="text-lg font-semibold">Docs</span>
         </div>
-        <div className="space-y-2">
+        <div className="space-y-3">
           <Button
             onClick={() => setMcpModalOpen(true)}
             variant="default"
@@ -108,7 +108,7 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
           </Button>
         </div>
       </div>
-      <ScrollArea className="flex-1">
+      <ScrollArea className="flex-1 overflow-hidden">
         <nav className="p-4 space-y-1">
           {categories.map((category) => {
             const isOpen = openCategories.has(category.title);
@@ -137,7 +137,7 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
                   </Button>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
-                  <div className="ml-4 mt-1 space-y-1">
+                  <div className="ml-4 space-y-1">
                     {category.items.map((item) => {
                       const isItemActive = activeItem?.item === item.path;
                       return (

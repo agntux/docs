@@ -8,6 +8,7 @@ import { useActiveSection } from "./ActiveSectionContext";
 import { SearchOverlay } from "./SearchOverlay";
 import { WaitlistModal } from "./WaitlistModal";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface DocsContentProps {
   structure: DocsStructure;
@@ -159,8 +160,9 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
         </div>
         <div className="pt-16">
           <div className="max-w-4xl mx-auto px-8 py-12 pl-16">
-        {structure.allFiles.map((file) => {
+        {structure.allFiles.map((file, index) => {
           const sectionId = fileToIdMap.get(file.path) || `section-${file.path}`;
+          const isLast = index === structure.allFiles.length - 1;
           return (
             <section
               key={file.path}
@@ -172,7 +174,10 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
                   sectionRefs.current.delete(sectionId);
                 }
               }}
-              className="mb-16 scroll-mt-20"
+              className={cn(
+                "mb-16 pb-16 scroll-mt-20",
+                !isLast && "border-b border-border"
+              )}
             >
               <MarkdownRenderer content={file.content} />
             </section>

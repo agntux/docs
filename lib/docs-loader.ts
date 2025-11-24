@@ -34,12 +34,39 @@ function extractOrder(str: string): number {
 
 /**
  * Formats a string for display (removes number prefix and converts to title case)
+ * Preserves common acronyms like MCP, API, SDK, etc.
+ * Handles special cases like AgntUX.
  */
 function formatTitle(str: string): string {
   const withoutPrefix = stripNumberPrefix(str);
+  const acronyms = ['mcp', 'api', 'sdk', 'ui', 'html', 'css', 'js', 'ts', 'json', 'rpc', 'http', 'https', 'url', 'uri'];
+  
+  // Special case: AgntUX should always be capitalized correctly
+  if (withoutPrefix.toLowerCase().includes('agntux')) {
+    return withoutPrefix
+      .split('-')
+      .map(word => {
+        const lowerWord = word.toLowerCase();
+        if (lowerWord === 'agntux') {
+          return 'AgntUX';
+        }
+        if (acronyms.includes(lowerWord)) {
+          return lowerWord.toUpperCase();
+        }
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      })
+      .join(' ');
+  }
+  
   return withoutPrefix
     .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map(word => {
+      const lowerWord = word.toLowerCase();
+      if (acronyms.includes(lowerWord)) {
+        return lowerWord.toUpperCase();
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
     .join(' ');
 }
 
