@@ -78,23 +78,23 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
       threshold: 0,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       // Find the entry that's most visible
-      let mostVisible: IntersectionObserverEntry | null = null;
+      let mostVisibleEntry: IntersectionObserverEntry | null = null;
       let maxRatio = 0;
 
-      entries.forEach((entry) => {
+      for (const entry of entries) {
         if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
           maxRatio = entry.intersectionRatio;
-          mostVisible = entry;
+          mostVisibleEntry = entry;
         }
-      });
+      }
 
       // If we have a visible entry, set it as active
-      if (mostVisible) {
-        const id = mostVisible.target.id;
-        if (id) {
-          setActiveSectionId(id);
+      if (mostVisibleEntry) {
+        const target = mostVisibleEntry.target as HTMLElement;
+        if (target && target.id) {
+          setActiveSectionId(target.id);
         }
       }
     }, observerOptions);

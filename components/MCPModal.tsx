@@ -200,7 +200,7 @@ export function MCPModal({ open, onOpenChange }: MCPModalProps) {
               <TabsContent key={key} value={key} className="space-y-4">
                 <div>
                   <h3 className="font-semibold mb-2">{instruction.name}</h3>
-                  {instruction.config ? (
+                  {'config' in instruction && instruction.config ? (
                     <div className="space-y-3">
                       <div>
                         <p className="text-sm text-muted-foreground mb-1">
@@ -219,14 +219,16 @@ export function MCPModal({ open, onOpenChange }: MCPModalProps) {
                           variant="default"
                           className="absolute top-2 right-2"
                           onClick={() =>
-                            copyToClipboard(instruction.config.content, key)
+                            'config' in instruction && instruction.config
+                              ? copyToClipboard(instruction.config.content, key)
+                              : undefined
                           }
                         >
                           {copied === key ? "Copied!" : "Copy"}
                         </Button>
                       </div>
                     </div>
-                  ) : (
+                  ) : 'instructions' in instruction && instruction.instructions ? (
                     <div className="space-y-3 text-sm leading-relaxed">
                       {instruction.instructions.split('\n\n').map((paragraph, idx) => {
                         // Check if paragraph contains code block
@@ -289,7 +291,7 @@ export function MCPModal({ open, onOpenChange }: MCPModalProps) {
                         );
                       })}
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </TabsContent>
             ))}
