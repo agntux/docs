@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AgntUX Documentation
 
-## Getting Started
+Welcome! Thank you for your interest in contributing to the AgntUX documentation. This repository contains the source files for the documentation website.
 
-First, run the development server:
+## Contributing
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+We welcome contributions to improve the documentation! Here's how to get started:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Fork the repository** on GitHub
+2. **Clone your fork** locally:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/docs.git
+   cd docs
+   ```
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the documentation site
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Making Changes
 
-## Learn More
+1. **Create a new branch** for your changes:
+   ```bash
+   git checkout -b your-branch-name
+   ```
+2. **Make your edits** to the documentation files (see Directory Structure below)
+3. **Test your changes** by running the dev server and checking the site
+4. **Commit your changes**:
+   ```bash
+   git add .
+   git commit -m "Description of your changes"
+   ```
+5. **Push to your fork**:
+   ```bash
+   git push origin your-branch-name
+   ```
+6. **Submit a Pull Request** on GitHub
 
-To learn more about Next.js, take a look at the following resources:
+### Directory Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The documentation is organized using a simple folder structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **`content/`** - Contains all documentation markdown files
+  - Folders represent **categories** in the navigation
+  - Files within folders represent **items** in the navigation
+  - Use number prefixes (e.g., `01-`, `02-`) to control the order:
+    - `01-introduction/` - First category
+    - `02-getting-started/` - Second category
+    - `01-introduction/01-welcome.md` - First item in Introduction
+    - `01-introduction/02-overview.md` - Second item in Introduction
 
-## Deploy on Vercel
+**Important Notes:**
+- Number prefixes control the order of categories and files in the navigation
+- Number prefixes are automatically removed from display names in the navigation
+- All files should be `.md` (Markdown) format
+- The folder and file names (without prefixes) will be converted to title case for display
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Example
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To add a new section "Advanced Usage" after "Getting Started":
+
+1. Create folder: `content/03-advanced-usage/`
+2. Add files: `content/03-advanced-usage/01-setup.md`, `content/03-advanced-usage/02-examples.md`
+3. The navigation will automatically show:
+   - **Advanced Usage** (category)
+    - Setup (item)
+    - Examples (item)
+
+### Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build the production site
+- `npm run lint` - Run the linter
+
+## Thank You!
+
+Thank you for taking the time to contribute to the AgntUX documentation! Your contributions help make the documentation better for everyone.

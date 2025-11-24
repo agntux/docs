@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useMemo } from "react";
-import { Search } from "lucide-react";
+import { Search, Github } from "lucide-react";
 import { MarkdownRenderer } from "@/lib/markdown-processor";
 import { DocsStructure, NavCategory } from "@/lib/docs-loader";
 import { useActiveSection } from "./ActiveSectionContext";
@@ -116,7 +116,7 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
   return (
     <>
       <div className="flex-1 overflow-y-auto relative">
-        <div className="fixed top-0 left-64 right-0 z-20 bg-background/95 backdrop-blur-sm border-b p-4 flex items-center justify-start shadow-sm">
+        <div className="fixed top-0 left-64 right-0 z-20 bg-background/95 backdrop-blur-sm border-b p-4 flex items-center justify-between shadow-sm">
           <Button
             variant="outline"
             size="sm"
@@ -128,6 +128,21 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
             <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
               <span className="text-xs">⌘</span>K
             </kbd>
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            asChild
+            className="gap-2 border-border hover:border-primary/50"
+          >
+            <a
+              href="https://github.com/agntux/docs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="h-4 w-4" />
+              Contribute
+            </a>
           </Button>
         </div>
         <div className="pt-16">
