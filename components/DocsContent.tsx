@@ -6,6 +6,7 @@ import { MarkdownRenderer } from "@/lib/markdown-processor";
 import { DocsStructure, NavCategory } from "@/lib/docs-loader";
 import { useActiveSection } from "./ActiveSectionContext";
 import { SearchOverlay } from "./SearchOverlay";
+import { WaitlistModal } from "./WaitlistModal";
 import { Button } from "@/components/ui/button";
 
 interface DocsContentProps {
@@ -27,6 +28,7 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
   const { setActiveSectionId } = useActiveSection();
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
   const [searchOpen, setSearchOpen] = useState(false);
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   // Create a map of file paths to their section IDs
   const fileToIdMap = useMemo(() => {
@@ -129,21 +131,31 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
               <span className="text-xs">⌘</span>K
             </kbd>
           </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            asChild
-            className="gap-2 border-border hover:border-primary/50"
-          >
-            <a
-              href="https://github.com/agntux/docs"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="flex items-center gap-2">
+            <Button
+              variant="default"
+              size="sm"
+              onClick={() => setWaitlistOpen(true)}
+              className="gap-2"
             >
-              <Github className="h-4 w-4" />
-              Contribute
-            </a>
-          </Button>
+              Join Waitlist
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="gap-2 border-border hover:border-primary/50"
+            >
+              <a
+                href="https://github.com/agntux/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4" />
+                Contribute
+              </a>
+            </Button>
+          </div>
         </div>
         <div className="pt-16">
           <div className="max-w-4xl mx-auto px-8 py-12 pl-16">
@@ -174,6 +186,10 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
         categories={categories}
         open={searchOpen}
         onOpenChange={setSearchOpen}
+      />
+      <WaitlistModal
+        open={waitlistOpen}
+        onOpenChange={setWaitlistOpen}
       />
     </>
   );
