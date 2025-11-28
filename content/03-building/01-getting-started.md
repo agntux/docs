@@ -11,30 +11,11 @@ Before you begin building, you should have:
 - Understanding of the Model Context Protocol (MCP) basics
 - Development environment set up (Node.js, Python, or Ruby depending on your chosen SDK)
 
-## Choosing Your Platform
-
-### Building ChatGPT Apps
-
-ChatGPT Apps are built using the **OpenAI Apps SDK** and are designed to run within ChatGPT. Key considerations:
-
-- Apps must follow OpenAI's guidelines and policies
-- UI is built using standard web technologies (HTML/CSS/JavaScript)
-- Apps integrate with ChatGPT's conversational interface
-- Submission process will be available before end of 2025
-
-### Building MCP Apps
-
-MCP Apps are built using the **MCP protocol** and can work across multiple host applications. Key considerations:
-
-- Apps use the MCP Apps Extension (SEP-1865) for UI capabilities
-- UI resources are declared and linked to tools
-- Apps can work with any MCP-compatible host
-- More flexible deployment options
-
 ## Development Tools
 
-Various SDKs and tools are available:
+Various SDKs and tools are available. For a complete list with links to official documentation and repositories, see the [Development Tools & SDKs section](/content/01-introduction/05-resources#development-tools--sdks) in Resources.
 
+**Available SDKs:**
 - **TypeScript SDKs** - For Node.js/TypeScript development
 - **Python SDKs** - For Python-based development
 - **Ruby SDKs** - For Ruby development

@@ -137,8 +137,14 @@ export function MarkdownRenderer({ content }: { content: string }) {
         blockquote: ({ node, ...props }) => (
           <blockquote className="border-l-4 border-primary pl-4 italic my-4" {...props} />
         ),
-        a: ({ node, ...props }) => (
-          <a className="text-primary hover:text-accent underline-offset-4 hover:underline" {...props} />
+        a: ({ node, href, ...props }: any) => (
+          <a 
+            href={href}
+            className="text-primary hover:text-accent underline-offset-4 hover:underline" 
+            target="_blank"
+            rel="noopener noreferrer"
+            {...props} 
+          />
         ),
         table: ({ node, ...props }) => (
           <div className="my-6 overflow-x-auto">

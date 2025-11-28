@@ -7,11 +7,11 @@
 AgntUX simplifies the process of creating interactive AI applications by providing:
 
 - **Planning assistance** - Help structure your app idea and requirements
-- **Design guidance** - Recommendations for UI/UX and user interactions
+- **Design assistance** - AgntUX designs the UI based on your design guidelines
 - **Build support** - Code generation and implementation help
-- **Deployment tools** - Streamlined processes for releasing your apps
+- **Deployment tools** - Full app deployment and hosting infrastructure
 
-Whether you're building a ChatGPT App for OpenAI's platform or an MCP App that works across multiple hosts, AgntUX aims to make the entire development lifecycle smoother and more accessible.
+Whether you're building a ChatGPT App, an MCP App, or a single app that works as both, AgntUX aims to make the entire development lifecycle smoother and more accessible.
 
 ## Current Status
 

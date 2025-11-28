@@ -1,10 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronDown, ChevronRight, Download, Plug } from "lucide-react";
+import Image from "next/image";
+import { ChevronDown, ChevronRight, Download, Plug, FileText } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { NavCategory } from "@/lib/docs-loader";
 import { cn } from "@/lib/utils";
 import { MCPModal } from "@/components/MCPModal";
@@ -40,6 +47,12 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
       if (element) {
         const id = element.id || path.replace('#', '');
         setActiveSectionId(id);
+        
+        // Update URL hash
+        const url = new URL(window.location.href);
+        url.hash = path;
+        window.history.pushState({}, '', url);
+        
         element.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }
@@ -81,32 +94,38 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
     <>
     <div className="h-screen w-64 border-r bg-background flex flex-col">
       <div className="p-4 border-b shrink-0">
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
-            <span className="text-xs text-muted-foreground">LOGO</span>
-          </div>
-          <span className="text-lg font-semibold">Docs</span>
+        <div className="flex items-center mb-4">
+          <Image
+            src="/agntux-logo.svg"
+            alt="AgntUX Docs Logo"
+            width={180}
+            height={50}
+            className="flex-shrink-0"
+            priority
+          />
         </div>
-        <div className="space-y-3">
-          <Button
-            onClick={() => setMcpModalOpen(true)}
-            variant="default"
-            size="sm"
-            className="w-full"
-          >
-            <Plug className="h-4 w-4 mr-2" />
-            Connect as MCP Server
-          </Button>
-          <Button
-            onClick={handleDownload}
-            variant="default"
-            size="sm"
-            className="w-full"
-          >
-            <Download className="h-4 w-4 mr-2" />
-            Download as Markdown
-          </Button>
-        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="default" size="sm" className="w-full">
+              AI-Friendly Options
+              <ChevronDown className="h-4 w-4 ml-2" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="start" className="w-56">
+            <DropdownMenuItem onClick={() => setMcpModalOpen(true)}>
+              <Plug className="h-4 w-4 mr-2" />
+              Connect as MCP Server
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => window.open('/docs.md', '_blank')}>
+              <FileText className="h-4 w-4 mr-2" />
+              View as Markdown
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={handleDownload}>
+              <Download className="h-4 w-4 mr-2" />
+              Download as Markdown
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
       <ScrollArea className="flex-1 overflow-hidden">
         <nav className="p-4 space-y-1">

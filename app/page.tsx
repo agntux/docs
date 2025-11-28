@@ -14,8 +14,8 @@ export default function HomePage() {
         </aside>
         <main className="flex-1 ml-64">
           <DocsContent structure={structure} categories={structure.categories} />
-        </main>
-      </div>
+      </main>
+    </div>
     </ActiveSectionProvider>
   );
 }

@@ -14,12 +14,26 @@ MCP Apps become available as individual hosts add support:
 
 ### Deployment Options
 
-You can deploy MCP Apps through:
+MCP Apps are served via an **MCP server**. The MCP server acts as the backend that handles requests and serves the app's UI resources, tools, and functionality to MCP-compatible hosts. You can deploy your MCP server (which serves your app) through various methods:
 
-- **Public repositories** - GitHub, GitLab, etc.
-- **Package registries** - npm, PyPI, RubyGems (for SDKs)
-- **Direct distribution** - Share server code directly
+**Server Deployment Methods:**
+
+- **Remote Deployments** - Host your MCP server externally (cloud providers, third-party services). Clients connect over HTTPS using a provided URL. This offers quick setup, scalability, and centralized maintenance.
+
+- **Managed Deployments** - Deploy your MCP server within managed infrastructure:
+  - **Managed-Dedicated** - Each user/agent has their own container instance for isolation
+  - **Managed-Shared** - Multiple users/agents share a single container instance for resource efficiency
+
+- **Workstation Deployments** - Install and run the MCP server locally on a user's machine. Useful when the server needs access to local files or programs.
+
+**Distribution Methods:**
+
+- **Public repositories** - Share your MCP server code via GitHub, GitLab, etc.
+- **Package registries** - Publish server code via npm, PyPI, RubyGems (for SDKs)
+- **Direct distribution** - Share server code directly to users
 - **MCP registries** - Community-maintained app directories (as they emerge)
+
+**Key Point:** Users install and run your MCP server, which then serves your app to MCP-compatible hosts. The server exposes tools, resources, and UI templates that hosts can discover and use.
 
 ## Release Checklist
 
@@ -41,44 +55,4 @@ Consider versioning your MCP App:
 - Provide migration guides
 - Maintain backward compatibility when possible
 
-## Distribution
-
-### Open Source
-
-Many MCP Apps are open source:
-
-- Choose an appropriate license (MIT, Apache 2.0, etc.)
-- Include contribution guidelines
-- Set up issue tracking
-- Create a README with clear instructions
-
-### Private Distribution
-
-For private/internal apps:
-
-- Set up secure distribution channels
-- Provide access controls
-- Document deployment procedures
-- Ensure proper authentication
-
-## Post-Release
-
-After releasing:
-
-- Monitor usage and feedback
-- Address issues and bugs
-- Add new features based on user needs
-- Keep documentation updated
-- Engage with the community
-
-## Future Considerations
-
-As the MCP ecosystem matures:
-
-- Official MCP app registries may emerge
-- Standardized distribution mechanisms may be established
-- Host-specific app stores may be created
-- Certification or verification programs may be introduced
-
-Stay engaged with the MCP community to stay current with distribution best practices and new opportunities.
 

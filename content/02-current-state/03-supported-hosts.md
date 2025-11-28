@@ -16,6 +16,44 @@ MCP Apps and UI-enabled MCP servers are supported by a growing number of MCP-com
 | **fast-agent** | ✅ | ❌ | Rendering only |
 | **VSCode** | ? | ? | Support planned (TBA) |
 
+## Host Details
+
+### ChatGPT
+- **Focus:** OpenAI's conversational AI platform that supports ChatGPT Apps and MCP servers
+- **Documentation:** [OpenAI Platform](https://platform.openai.com/)
+
+### Nanobot
+- **Focus:** AI coding assistant focused on software development and code generation
+- **Documentation:** [Nanobot Documentation](https://nanobot.dev/)
+
+### Postman
+- **Focus:** API development and testing platform with MCP integration for API workflows
+- **Documentation:** [Postman MCP Documentation](https://www.postman.com/)
+
+### Goose
+- **Focus:** AI assistant platform designed for productivity and workflow automation
+- **Documentation:** [Goose Documentation](https://goose.ai/)
+
+### LibreChat
+- **Focus:** Open-source ChatGPT alternative with support for multiple AI providers and MCP servers
+- **Documentation:** [LibreChat Documentation](https://docs.librechat.ai/)
+
+### Smithery
+- **Focus:** AI agent platform focused on building and deploying conversational AI applications
+- **Documentation:** [Smithery Documentation](https://smithery.ai/)
+
+### MCPJam
+- **Focus:** Development environment and playground for testing and building MCP applications
+- **Documentation:** [MCPJam Documentation](https://mcpjam.com/)
+
+### fast-agent
+- **Focus:** Fast, lightweight AI agent framework for building and running MCP-compatible applications
+- **Documentation:** [fast-agent GitHub](https://github.com/fast-agent)
+
+### VSCode
+- **Focus:** Popular code editor with planned MCP Apps support
+- **Status:** Support planned (TBA)
+
 **Legend:**
 - ✅: Fully Supported
 - ⚠️: Partial Support
@@ -44,15 +82,6 @@ Hosts with rendering-only support can:
 - Display UI components visually
 - Cannot handle interactive actions from the UI
 - Useful for visualization and display purposes
-
-## Choosing a Host
-
-When building MCP Apps, consider:
-
-1. **Your target audience** - Which hosts do your users primarily use?
-2. **Required features** - Do you need full UI action support or is rendering sufficient?
-3. **Development workflow** - Some hosts offer better development tools and debugging
-4. **Future roadmap** - Check host roadmaps for planned feature additions
 
 ## Resources
 

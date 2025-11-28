@@ -38,24 +38,14 @@ This section provides links to official documentation, community resources, deve
 
 ## Host Documentation
 
-### Supported Hosts
-
-- **ChatGPT** - [OpenAI Platform](https://platform.openai.com/)
-- **Nanobot** - [Nanobot Documentation](https://nanobot.dev/)
-- **Postman** - [Postman MCP Documentation](https://www.postman.com/)
-- **Goose** - [Goose Documentation](https://goose.ai/)
-- **LibreChat** - [LibreChat Documentation](https://docs.librechat.ai/)
-- **Smithery** - [Smithery Documentation](https://smithery.ai/)
-- **MCPJam** - [MCPJam Documentation](https://mcpjam.com/)
-- **fast-agent** - [fast-agent GitHub](https://github.com/fast-agent)
+For detailed information about supported hosts, including feature support levels and documentation links, see the [Supported Hosts](/content/02-current-state/03-supported-hosts) section.
 
 ## Community Resources
 
 ### Forums & Discussions
 
-- **MCP Community** - Join discussions about MCP and MCP Apps
-- **GitHub Discussions** - [MCP GitHub Discussions](https://github.com/modelcontextprotocol/servers/discussions)
-- **Stack Overflow** - Search for MCP-related questions and answers
+- **[MCP GitHub Discussions](https://github.com/modelcontextprotocol/servers/discussions)** - Official MCP community discussions
+- **[Stack Overflow - MCP Tag](https://stackoverflow.com/questions/tagged/model-context-protocol)** - MCP-related questions and answers
 
 ### GitHub Repositories
 
