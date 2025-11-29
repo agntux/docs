@@ -41,3 +41,18 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### File handling info
+
+**Summary:** I'm wondering what's the best approach for file handling. 
+If a user references the app in the chat and provides/uploads images/PDFs and asks a question.
+
+Do we use the window.openai in some way or are we expected to provide a dropzone or similar widget or something?
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #34](https://github.com/openai/openai-apps-sdk-examples/issues/34)
+
+**Reported by:** @matijagrcic
