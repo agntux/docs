@@ -3,6 +3,12 @@
 This changelog tracks updates to the AgntUX documentation, including new content, improvements, and updates based on the latest developments in ChatGPT Apps and MCP Apps.
 
 
+## [2023-11-01]
+
+### Added
+- **ToolError: None: MCP write action is temporarily disabled** - Added a troubleshooting entry to address the issue where MCP write actions are temporarily disabled, providing guidance on how to resolve this error.
+  - [PR #101](https://github.com/agntux/docs/pull/101)
+
 ## Template Format
 
 When adding new changelog entries, the following format is used. (Changelog entries are created automatically by an AI agent)
