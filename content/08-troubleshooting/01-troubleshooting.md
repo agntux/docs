@@ -41,3 +41,19 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+### ToolError: None: MCP write action is temporarily disabled
+
+**Summary:** On mobile view (under 680px), users encounter a `ToolError: None: MCP write action is temporarily disabled` error after confirming to use a tool. This issue does not occur on desktop view.
+
+**Solution:**
+1. Remove all widget metadata (e.g., `openai/outputTemplate`, `resultCanProduceWidget`).
+2. Change the resource MIME type from `text/html+skybridge` to plain `text/html`.
+3. Ensure the tool is strictly read-only by setting `annotations.readOnlyHint: true` and avoiding destructive actions.
+
+**Resources:**
+- [GitHub Issue #68](https://github.com/openai/openai-apps-sdk-examples/issues/68)
+
+**Reported by:** @sFritsch09
+**Date Reported:** 2025-10-19
+**Contributors:**
+
