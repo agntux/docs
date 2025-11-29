@@ -41,3 +41,20 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### involuntary re rendering of widget when using sendFollowUpMessage
+
+**Summary:** So when i wanted to call a new widget from a widget, i was using the sendFollowUpMessage. This was working just fine the last time that i worked on the app. But last week I resumed my work and now chatgpt is re rendering the main widget and then it renders the new one, which for sure is not the intended behavior. 
+
+anyone facing the same issue?
+thanks!
+
+
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #129](https://github.com/openai/openai-apps-sdk-examples/issues/129)
+
+**Reported by:** @diegoquiroz-jpg
