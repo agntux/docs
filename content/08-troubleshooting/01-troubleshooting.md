@@ -41,3 +41,16 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### The `+mcp` structured syntax suffix needs to be registered with IANA
+
+**Summary:** See https://www.iana.org/assignments/media-type-structured-suffix/media-type-structured-suffix.xhtml
+
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #151](https://github.com/MCP-UI-Org/mcp-ui/issues/151)
+
+**Reported by:** @lrosenthol
