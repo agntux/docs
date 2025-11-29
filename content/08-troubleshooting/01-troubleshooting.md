@@ -41,3 +41,17 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### live demo is not working.
+
+**Summary:** The demo mentioned in the mcp ui website does not work. All API calls will get 500
+
+<img width="1415" height="960" alt="Image" src="https://github.com/user-attachments/assets/8f8984aa-a947-4251-bb91-74f8d2f73307" />
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #145](https://github.com/MCP-UI-Org/mcp-ui/issues/145)
+
+**Reported by:** @ZiqiYe77
