@@ -37,3 +37,14 @@ When adding new changelog entries, the following format is used. (Changelog entr
 - Always link to the PR where the documentation change was merged
 - Use descriptive link text that indicates what the link contains
 
+## [Current Date]
+
+### Updated
+- **MCP Apps Connectivity** - Fixed an issue with MCP Apps connectivity to improve reliability.
+  - [PR #101](https://github.com/agntux/docs/pull/101)
+
+- **ChatGPT Apps Documentation** - Updated documentation to reflect the new API changes for ChatGPT Apps.
+  - [PR #102](https://github.com/agntux/docs/pull/102)
+
+- **MCP-UI Troubleshooting** - Enhanced the troubleshooting section for MCP-UI to provide more detailed guidance.
+  - [PR #103](https://github.com/agntux/docs/pull/103)
