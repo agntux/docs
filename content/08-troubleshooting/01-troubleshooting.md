@@ -41,3 +41,22 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Example of how to authenticate to a backend within a widget
+
+**Summary:** The Apps SDK docs say:
+
+>  If you already run an API or need multi-user collaboration, integrate with your existing storage layer. In this model:
+> 
+> Authenticate the user via OAuth (see [Authentication](https://developers.openai.com/apps-sdk/build/auth)) so you can map ChatGPT identities to your internal accounts.
+> Use your backend’s APIs to fetch and mutate data. Keep latency low; users expect components to render in a few hundred milliseconds.
+
+This repo has an example of facilitating the O
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #29](https://github.com/openai/openai-apps-sdk-examples/issues/29)
+
+**Reported by:** @airhorns
