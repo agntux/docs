@@ -19,6 +19,8 @@ When adding new troubleshooting entries, use the following format:
 - [Link to Stack Overflow or forum post](URL)
 
 **Reported by:** @username (if available)
+**Date Reported:** YYYY-MM-DD (if available)
+**Date Resolved:** YYYY-MM-DD (if available)
 **Contributors:** @username1, @username2 (if available)
 ```
 
@@ -32,6 +34,8 @@ If you encounter an issue not listed here, please [create a pull request](https:
 - Error messages, logs, and steps to reproduce (if applicable)
 - Links to relevant documentation, GitHub issues, or discussions
 - Information about who reported the issue and contributors (if available)
+- Date reported (if available)
+- Date resolved (if available)
 
 ---
 

@@ -167,6 +167,36 @@ Examples are tagged to indicate which platform(s) they support:
 
 ---
 
+## Example Template
+
+When adding new examples, use the following format:
+
+```markdown
+### [App Name] - [Brief Description]
+
+**Tags:** `ChatGPT App` or `MCP App` or both
+
+**Description:** Detailed description of the app and its purpose.
+
+**Features:**
+- Feature 1
+- Feature 2
+- Feature 3
+
+**Announcement:**
+- Date announced: YYYY-MM-DD (if available)
+- [Announcement Link](URL) (if available)
+
+**Status:** Current availability status
+
+**Links:**
+- [Documentation](URL) (if available)
+- [Repository](URL) (if available)
+- [Demo](URL) (if available)
+```
+
+---
+
 ## Contributing Examples
 
 If you know of a ChatGPT App or MCP App that should be featured here, please [create a pull request](https://github.com/agntux/docs/pulls) with:
@@ -174,6 +204,7 @@ If you know of a ChatGPT App or MCP App that should be featured here, please [cr
 - A brief description of the app's functionality
 - Note which platform(s) it supports (ChatGPT App, MCP App, or both)
 - Links to official announcements or documentation
+- Date announced (if available)
 
 ---
 
