@@ -41,3 +41,24 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### ToolError: None: MCP write action is temporarily disabled
+
+**Summary:** On Desktop view everything is working fine but when I change screen width to mobile view like under 680px then I get Error after confirmation to use the tool:
+
+`ToolError: None: MCP write action is temporarily disabled`
+
+First I thought this is an UI issue and I even tried without widget which did not work.
+
+🔍 What I’ve Tried
+
+- Removed all widget metadata (openai/outputTemplate, resultCanProduceWidget, etc.) → still fails.
+- Changed resource MIME type from text/html+skybridge to plain text/htm
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #68](https://github.com/openai/openai-apps-sdk-examples/issues/68)
+
+**Reported by:** @sFritsch09
