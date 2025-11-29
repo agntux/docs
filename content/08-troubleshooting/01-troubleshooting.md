@@ -41,3 +41,28 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Feature Request: Expose User Identifier and Non-Sensitive Profile Data
+
+**Summary:** Hi OpenAI team! 👋
+
+First of all, thank you for creating such an incredible tool for developers. The Apps SDK opens up amazing possibilities for building custom experiences.
+
+## Feature Request
+
+I'd like to suggest exposing user identification and non-sensitive profile data through the SDK to enable better personalized experiences without requiring additional authentication in our apps.
+
+### Proposed Implementation
+
+**1. User Identifier**
+Expose a unique user identifier via:
+```javascript
+window
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #132](https://github.com/openai/openai-apps-sdk-examples/issues/132)
+
+**Reported by:** @gbmarcos
