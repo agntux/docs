@@ -41,3 +41,23 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Don't need `"carousel"` displayMode
+
+**Summary:** I think we can remove `carousel` from this enum:
+
+```
+displayMode?: "inline" | "fullscreen" | "pip" | "carousel";
+```
+
+- Seems unnecessary to specify since it doesn't require any different treatment from `inline`, assuming the arrow buttons are provided by the apps (which I think they should be, to avoid the complexity of communicating back and forth about whether we're at the start/end of the carousel)
+- Not to mention:
+  - Being a `carousel` is something that the app would decide, and not some
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #51](https://github.com/modelcontextprotocol/ext-apps/issues/51)
+
+**Reported by:** @martinalong
