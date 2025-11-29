@@ -41,3 +41,24 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Is there any documentation on the release process for an OpenAI App?
+
+**Summary:** I'm looking for any information available on what the release and update processes are like for an OpenAI App.
+
+Let's say my Todo app is published for the first time, great.  Users have installed it.
+1) Tool metadata has been cached by OpenAI
+2) WidgetURIs and html content have been cached by OpenAI
+
+I can push updates to my Todo MCP server at will, but any metadata changes won't be seen by OpenAI due to the long lived caching.  
+
+What is the release process like for updating my Todo app?  
+1) W
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #131](https://github.com/openai/openai-apps-sdk-examples/issues/131)
+
+**Reported by:** @edkimmel
