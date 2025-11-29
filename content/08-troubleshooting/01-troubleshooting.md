@@ -41,3 +41,21 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Ignored call of `SendFollowUpMessage`
+
+**Summary:** When `window.openai.sendFollowUpMessage` is called before the LLM has finished responding to the user, the call is simply ignored without any error.
+
+There is also no way to determine whether the LLM has finished responding or not.
+
+Because of this, we have a problem: if the user taps a button in the widget before the LLM has finished its response, we have no way to handle that action.
+
+I found only one workaround to detect whether sendFollowUpMessage was handled or ignored — measuring the funct
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #126](https://github.com/openai/openai-apps-sdk-examples/issues/126)
+
+**Reported by:** @EAntropov-tofu
