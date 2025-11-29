@@ -41,3 +41,25 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Display mode negotiation is missing
+
+**Summary:** Currently the spec has:
+- `displayMode` - host tells app the current mode
+- `availableDisplayModes` - host tells app what modes it supports
+
+But there's no way for the **app** to declare what display modes it supports. 
+
+For example, if an app wants to say "hey I support fullscreen", there's no mechanism for that. The host just assumes all apps work in all modes?
+
+We need some negotiation where:
+1. App declares its supported display modes (maybe in `ui/initialize` capabilities?)
+2. Host knows it
+
+**Solution:** See comments in GitHub issue for potential solutions
+
+**Resources:**
+- [GitHub Issue #41](https://github.com/modelcontextprotocol/ext-apps/issues/41)
+
+**Reported by:** @antonpk1
