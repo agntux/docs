@@ -41,3 +41,21 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+### Unable to run example
+
+**Summary:**
+An error occurs when running `npm i` in the project environment, specifically related to TypeScript errors in `app-bridge.ts`.
+
+**Solution:**
+1. Ensure Node.js version is compatible with the project requirements.
+2. Check TypeScript configurations and ensure all dependencies are correctly installed.
+3. Review and fix TypeScript errors in `app-bridge.ts` as specified in the error logs.
+
+**Resources:**
+- [GitHub Issue #32](https://github.com/modelcontextprotocol/ext-apps/issues/32)
+
+**Reported by:** @Moxmi
+**Date Reported:** 2025-11-26
+**Date Resolved:** 2025-11-28
+**Contributors:**
+
