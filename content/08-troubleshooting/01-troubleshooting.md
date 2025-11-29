@@ -41,3 +41,39 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### ui/message content format discrepancy: SEP-1865 specifies object
+
+**Summary:** The @modelcontextprotocol/ext-apps SDK sends ui/message with content as an array, but SEP-1865 specifies it as a single object.
+
+From [SEP](https://github.com/modelcontextprotocol/ext-apps/blob/main/specification/draft/apps.mdx)
+
+```
+  // ui/message request
+  {
+    jsonrpc: "2.0",
+    id: 2,
+    method: "ui/message",
+    params: {
+      role: "user",
+      content: {
+        type: "text",
+        text: string
+      }
+    }
+  }
+```
+SDK Behavior
+```
+  {
+    jsonrpc: "2.0",
+    id: 2,
+    method: "
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #48](https://github.com/modelcontextprotocol/ext-apps/issues/48)
+
+**Reported by:** @chelojimenez
