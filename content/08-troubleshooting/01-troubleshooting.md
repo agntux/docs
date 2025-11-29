@@ -41,3 +41,25 @@ If you encounter an issue not listed here, please [create a pull request](https:
 
 *Note: This section is automatically updated by our AI agent as new issues are discovered and resolved. The troubleshooting entries are based on community reports, GitHub issues, and developer discussions.*
 
+
+
+### Don't need `system` in the `theme` enum
+
+**Summary:** `system` as a separate value of theme seems superfluous? Instead, the host could just send an update message to the server of `light`/`dark`upon the system theme changing
+
+Current theme enum:
+```
+theme?: "light" | "dark" | "system";
+```
+
+Proposed theme enum:
+```
+theme?: "light" | "dark";
+```
+
+**Solution:** Solution pending or not yet documented
+
+**Resources:**
+- [GitHub Issue #50](https://github.com/modelcontextprotocol/ext-apps/issues/50)
+
+**Reported by:** @martinalong
