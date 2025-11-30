@@ -37,3 +37,11 @@ When adding new changelog entries, the following format is used. (Changelog entr
 - Always link to the PR where the documentation change was merged
 - Use descriptive link text that indicates what the link contains
 
+
+## 2025-11-30
+
+### Added
+- **Troubleshooting: Unable to run external apps example** - New troubleshooting guide covering common causes and fixes when the external apps example fails to run.
+  - [PR #101](https://github.com/agntux/docs/pull/101)
+- **Troubleshooting: MCP UI createUIResource not exported error** - New troubleshooting guide for resolving `createUIResource` not exported errors in MCP UI integrations.
+  - [PR #102](https://github.com/agntux/docs/pull/102)
