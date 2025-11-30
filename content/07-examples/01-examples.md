@@ -153,6 +153,23 @@ This section showcases real-world examples of ChatGPT Apps and MCP Apps that hav
 
 ---
 
+### Guide to Building ChatGPT Apps with MCP
+
+**Tags:** `ChatGPT App`, `MCP App`
+
+**Description:** This guide provides insights into building custom apps with visual components that can be rendered inside ChatGPT using the MCP framework. It highlights the integration of Spotify and Booking applications with MCP servers.
+
+**Features:**
+- Build custom apps with visual components
+- Render UI components inside ChatGPT
+- Integrate applications like Spotify and Booking with MCP
+
+**Announcement:**
+- Featured on Reddit with insights into building ChatGPT Apps using MCP
+- [Reddit Announcement](https://www.reddit.com/r/mcp/comments/1onecfw/a_guide_to_building_chatgpt_apps_with_mcp_using/)
+
+**Status:** Available as a guide
+
 ---
 
 ## About Tags
