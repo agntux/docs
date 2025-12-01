@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Agntux Documentation",
-  description: "Documentation for Agntux",
+  title: "AgntUX Documentation",
+  description: "Documentation for AgntUX",
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "any" },
