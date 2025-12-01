@@ -6,7 +6,7 @@ This section provides an overview of where things currently stand with the devel
 
 ### ChatGPT Apps
 
-ChatGPT Apps are interactive applications that run within ChatGPT, providing rich user interfaces and specialized functionality. As of late 2024, developers can:
+ChatGPT Apps are interactive applications that run within ChatGPT, providing rich user interfaces and specialized functionality. As of late 2025, developers can:
 
 - Build apps using the OpenAI Apps SDK
 - Create interactive UIs with HTML/CSS/JavaScript

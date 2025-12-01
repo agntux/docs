@@ -10,8 +10,8 @@
 - Integration with Zillow's property database
 
 **Announcement:**
-- Date announced: 2024-11-06
-- Featured at OpenAI's Dev Day conference in November 2024
+- Date announced: 2025-11-06
+- Featured at OpenAI's Dev Day conference in November 2025
 - [OpenAI Dev Day Announcement](https://openai.com/index/introducing-apps-in-chatgpt/)
 
 **Status:** Available in ChatGPT

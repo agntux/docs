@@ -270,7 +270,7 @@ This section provides an overview of where things currently stand with the devel
 
 ### ChatGPT Apps
 
-ChatGPT Apps are interactive applications that run within ChatGPT, providing rich user interfaces and specialized functionality. As of late 2024, developers can:
+ChatGPT Apps are interactive applications that run within ChatGPT, providing rich user interfaces and specialized functionality. As of late 2025, developers can:
 
 - Build apps using the OpenAI Apps SDK
 - Create interactive UIs with HTML/CSS/JavaScript
@@ -335,10 +335,10 @@ This collaboration resulted in **SEP-1865: MCP Apps Extension**, which standardi
 
 While exact dates are still being finalized, the general progression has been:
 
-1. **2024 (Early)**: MCP-UI project launches, proving the concept
-2. **2024 (Mid)**: Community adoption grows, major companies integrate
-3. **2024 (Late)**: OpenAI Apps SDK launches, bringing UI to ChatGPT
-4. **2025 (Early)**: MCP Apps Extension proposal (SEP-1865) published
+1. **2025 (Early)**: MCP-UI project launches, proving the concept
+2. **2025 (Mid)**: Community adoption grows, major companies integrate
+3. **2025 (Late)**: OpenAI Apps SDK launches, bringing UI to ChatGPT
+4. **2025 (Late)**: MCP Apps Extension proposal (SEP-1865) published
 5. **2025 (Ongoing)**: Standardization work continues, more hosts add support
 
 ## The Path Forward
