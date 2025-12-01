@@ -33,3 +33,7 @@ Behind the scenes, an AI agent automatically updates the content in this reposit
 - A human reviewer then reviews and merges the PRs
 
 This ensures the documentation stays current with the rapidly evolving landscape of ChatGPT Apps and MCP Apps.
+
+## Contributing
+
+We welcome contributions from the community! If you have updates, corrections, new examples, or troubleshooting information to share, please [submit a pull request](https://github.com/agntux/docs/pulls). Your contributions help keep this knowledge base accurate and comprehensive for all developers building ChatGPT Apps and MCP Apps.
