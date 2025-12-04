@@ -116,22 +116,46 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
     };
   }, [setActiveSectionId, structure]);
 
+  const handleScrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      setActiveSectionId(id);
+      
+      // Update URL hash
+      const url = new URL(window.location.href);
+      url.hash = `#${id}`;
+      window.history.pushState({}, '', url);
+      
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
       <div className="flex-1 overflow-y-auto relative">
         <div className="fixed top-0 left-64 right-0 z-20 bg-background/95 backdrop-blur-sm border-b p-4 flex items-center justify-between shadow-sm">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setSearchOpen(true)}
-            className="gap-2 border-border hover:border-primary/50"
-          >
-            <Search className="h-4 w-4" />
-            Search
-            <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
-              <span className="text-xs">⌘</span>K
-            </kbd>
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setSearchOpen(true)}
+              className="gap-2 border-border hover:border-primary/50"
+            >
+              <Search className="h-4 w-4" />
+              Search
+              <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
+                <span className="text-xs">⌘</span>K
+              </kbd>
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => handleScrollToSection('introduction-what-is-agntux')}
+              className="gap-2"
+            >
+              What is AgntUX?
+            </Button>
+          </div>
           <div className="flex items-center gap-2">
             <Button
               variant="default"
