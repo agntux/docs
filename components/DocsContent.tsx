@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useMemo } from "react";
-import { Search, Github } from "lucide-react";
+import { Search, Github, Menu } from "lucide-react";
 import { MarkdownRenderer } from "@/lib/markdown-processor";
 import { DocsStructure, NavCategory } from "@/lib/docs-loader";
 import { useActiveSection } from "./ActiveSectionContext";
@@ -13,6 +13,7 @@ import { cn } from "@/lib/utils";
 interface DocsContentProps {
   structure: DocsStructure;
   categories: NavCategory[];
+  onMobileMenuToggle?: () => void;
 }
 
 function slugify(str: string): string {
@@ -25,7 +26,7 @@ function slugify(str: string): string {
 }
 
 
-export function DocsContent({ structure, categories }: DocsContentProps) {
+export function DocsContent({ structure, categories, onMobileMenuToggle }: DocsContentProps) {
   const { setActiveSectionId } = useActiveSection();
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
   const [searchOpen, setSearchOpen] = useState(false);
@@ -133,16 +134,26 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
   return (
     <>
       <div className="flex-1 overflow-y-auto relative">
-        <div className="fixed top-0 left-64 right-0 z-20 bg-background/95 backdrop-blur-sm border-b p-4 flex items-center justify-between shadow-sm">
-          <div className="flex items-center gap-2">
+        <div className="fixed top-0 left-0 lg:left-64 right-0 z-20 bg-background/95 backdrop-blur-sm border-b p-2 sm:p-4 flex items-center justify-between shadow-sm gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 flex-1 min-w-0">
+            {onMobileMenuToggle && (
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={onMobileMenuToggle}
+                className="lg:hidden shrink-0"
+              >
+                <Menu className="h-5 w-5" />
+              </Button>
+            )}
             <Button
               variant="outline"
               size="sm"
               onClick={() => setSearchOpen(true)}
-              className="gap-2 border-border hover:border-primary/50"
+              className="gap-1 sm:gap-2 border-border hover:border-primary/50 shrink-0"
             >
               <Search className="h-4 w-4" />
-              Search
+              <span className="hidden sm:inline">Search</span>
               <kbd className="pointer-events-none hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
                 <span className="text-xs">⌘</span>K
               </kbd>
@@ -151,39 +162,42 @@ export function DocsContent({ structure, categories }: DocsContentProps) {
               variant="ghost"
               size="sm"
               onClick={() => handleScrollToSection('introduction-what-is-agntux')}
-              className="gap-2"
+              className="gap-2 text-xs sm:text-sm shrink-0"
             >
-              What is AgntUX?
+              <span className="hidden sm:inline">What is AgntUX?</span>
+              <span className="sm:hidden">About</span>
             </Button>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
             <Button
               variant="default"
               size="sm"
               onClick={() => setWaitlistOpen(true)}
-              className="gap-2"
+              className="gap-1 sm:gap-2 text-xs sm:text-sm px-2 sm:px-3"
             >
-              Join Waitlist
+              <span className="hidden sm:inline">Join Waitlist</span>
+              <span className="sm:hidden">Waitlist</span>
             </Button>
             <Button
               variant="outline"
               size="sm"
               asChild
-              className="gap-2 border-border hover:border-primary/50"
+              className="gap-1 sm:gap-2 border-border hover:border-primary/50 px-2 sm:px-3"
             >
               <a
                 href="https://github.com/agntux/docs"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center"
               >
                 <Github className="h-4 w-4" />
-                Contribute
+                <span className="hidden sm:inline">Contribute</span>
               </a>
             </Button>
           </div>
         </div>
-        <div className="pt-16">
-          <div className="max-w-4xl mx-auto px-8 py-12 pl-16">
+        <div className="pt-12 sm:pt-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12 lg:pl-16">
         {structure.allFiles.map((file, index) => {
           const sectionId = fileToIdMap.get(file.path) || `section-${file.path}`;
           const isLast = index === structure.allFiles.length - 1;

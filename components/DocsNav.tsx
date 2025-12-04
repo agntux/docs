@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ChevronDown, ChevronRight, Download, Plug, FileText } from "lucide-react";
+import { ChevronDown, ChevronRight, Download, Plug, FileText, Menu, X } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -20,9 +20,11 @@ import { useActiveSection } from "./ActiveSectionContext";
 interface DocsNavProps {
   categories: NavCategory[];
   onNavigate?: (path: string) => void;
+  mobileOpen?: boolean;
+  onMobileToggle?: () => void;
 }
 
-export function DocsNav({ categories, onNavigate }: DocsNavProps) {
+export function DocsNav({ categories, onNavigate, mobileOpen, onMobileToggle }: DocsNavProps) {
   const { activeSectionId, setActiveSectionId } = useActiveSection();
   const [openCategories, setOpenCategories] = useState<Set<string>>(
     new Set(categories.map(cat => cat.title))
@@ -40,6 +42,11 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
   };
 
   const handleClick = (path: string) => {
+    // Close mobile menu when navigating
+    if (onMobileToggle && mobileOpen) {
+      onMobileToggle();
+    }
+    
     if (onNavigate) {
       onNavigate(path);
     } else {
@@ -92,17 +99,38 @@ export function DocsNav({ categories, onNavigate }: DocsNavProps) {
 
   return (
     <>
-    <div className="h-screen w-64 border-r bg-background flex flex-col">
-      <div className="p-4 border-b shrink-0">
-        <div className="flex items-center mb-4">
+    {/* Mobile overlay */}
+    {mobileOpen && (
+      <div
+        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        onClick={onMobileToggle}
+      />
+    )}
+    
+    <div className={cn(
+      "h-screen w-64 border-r bg-background flex flex-col",
+      "fixed lg:static z-50",
+      "transform transition-transform duration-300 ease-in-out",
+      mobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+    )}>
+      <div className="p-3 sm:p-4 border-b shrink-0">
+        <div className="flex items-center justify-between mb-4">
           <Image
             src="/agntux-logo.svg"
             alt="AgntUX Docs Logo"
             width={180}
             height={50}
-            className="flex-shrink-0"
+            className="flex-shrink-0 w-32 sm:w-[180px] h-auto"
             priority
           />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={onMobileToggle}
+            className="lg:hidden"
+          >
+            <X className="h-5 w-5" />
+          </Button>
         </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
